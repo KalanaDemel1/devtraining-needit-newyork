@@ -1,3 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="task" label="NeedIt Task" max_length="40" name="x_58872_needit_needit_task" sizeclass="9" type="collection"/>
+    <element audit="true" extends="task" label="NeedIt Task" max_length="40" name="x_58872_needit_needit_task" sizeclass="6" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Payment Type" max_length="40" name="u_payment_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Lantern Pay" sequence="0" value="1"/>
+                <element inactive_on_update="false" label="Hedgehog" sequence="1" value="2"/>
+            </choice>
+        </element>
+    </element>
 </database>
